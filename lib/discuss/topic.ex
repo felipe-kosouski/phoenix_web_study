@@ -9,7 +9,7 @@ defmodule Discuss.Topic do
     timestamps()
   end
 
-  def changeset(%Topic{} = topic, attrs) do
+  def changeset(%Topic{} = topic, attrs \\ %{}) do
     topic
     |> cast(attrs, [:title])
     |> validate_required([:title])
